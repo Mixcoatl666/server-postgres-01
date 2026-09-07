@@ -5,6 +5,8 @@ import clientesRoutes from "./routes/clientes.routes.js";
 
 const app = express();
 
+app.disable("x-powered-by");
+
 app.use(morgan("dev"));
 app.use(express.json());
 
