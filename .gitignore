@@ -3,3 +3,4 @@ node_modules/
 .scannerwork
 .vscode
 sonar-project.properties
+pnpm-lock.yaml
