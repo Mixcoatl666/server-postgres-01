@@ -4,3 +4,5 @@ node_modules/
 .vscode
 sonar-project.properties
 pnpm-lock.yaml
+pnpm-workspace.yaml
+coverage/

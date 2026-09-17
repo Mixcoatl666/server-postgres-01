@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "dev": "node --watch src/index.js",
-    "sonar": "sonar-scanner-npm"
+    "sonar": "sonar-scanner-npm",
+    "test": "NODE_OPTIONS=--experimental-vm-modules jest",
+    "test:coverage": "NODE_OPTIONS=--experimental-vm-modules jest --coverage"
   },
   "keywords": [],
   "author": "",
@@ -25,6 +27,8 @@
     "pg": "^8.23.0"
   },
   "devDependencies": {
-    "@sonar/scan": "^5.0.0"
+    "@sonar/scan": "^5.0.0",
+    "jest": "^30.5.1",
+    "supertest": "^7.2.2"
   }
 }

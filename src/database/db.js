@@ -1,12 +1,11 @@
-import pg from "pg"
-import { databaseConfig } from "../configs/config.js"
+import pg from "pg";
+import { databaseConfig } from "../configs/config.js";
+
+export const pool = new pg.Pool(databaseConfig);
 
 try {
-  const pool = new pg.Pool(databaseConfig)
-  await pool.connect();
-  console.log("Conexión a la base de datos exitosa")
+  await pool.query("SELECT 1");
+  console.log("Conexión a la base de datos exitosa");
 } catch (error) {
-  console.error("Error al conectar a la base de datos:", error)
+  console.error("Error al conectar a la base de datos:", error);
 }
-
-export const pool = new pg.Pool(databaseConfig)
